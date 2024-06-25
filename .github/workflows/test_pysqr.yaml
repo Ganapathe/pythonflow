@@ -22,11 +22,21 @@ jobs:
       - name: run python command 
         run: pip install -r requirements.txt
 
-      - name: run python
+      - name: Executing
         run: pytest -v
         continue-on-error: true
       
       - name: checking
         run: echo "helo"
-
+      
+      - name: buikd docker image
+        uses: docker-practice/actions-setup-docker@master
+        timeout-minutes: 12
+      
+      - name: build docker image
+        run: |
+          set -x
+          docker version
+          docker build -t pydoc .
+        
 
