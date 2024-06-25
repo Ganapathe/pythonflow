@@ -23,7 +23,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: run python
-        run: pytest
+        run: pytest -v
         continue-on-error: true
       
       - name: checking
