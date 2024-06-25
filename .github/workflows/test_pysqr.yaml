@@ -37,7 +37,7 @@ jobs:
         run: |
           set -x
           docker version
-          docker build -t pydoc .
+          docker build -t ganapathisouth/imagefromworkflow .
       
       - name: docker hub login
         uses: docker/login-action@v3
