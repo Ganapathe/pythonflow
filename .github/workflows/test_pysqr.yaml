@@ -1,4 +1,4 @@
-name: py build project
+name: pytest workflow
 
 on:
   push:
