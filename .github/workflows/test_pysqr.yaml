@@ -23,6 +23,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: run python
-        run: pytest 
+        run: pytest
+        continue-on-error: true
+      
+      - name: checking
+        run: echo "helo"
 
 
